@@ -9,7 +9,7 @@ from sklearn.metrics import pairwise_distances
 #the numpy version for mad (Be able to compute quickly)
 #in_arr:[node_num * hidden_dim], the node feature matrix;
 #mask_arr: [node_num * node_num], the mask matrix of the target raltion;
-#target_idx = [1,2,3...n], the nodes idx for which we calculate the mad_gap value;
+#target_idx = [1,2,3...n], the nodes idx for which we calculate the mad value;
 def mad_value(in_arr, mask_arr, distance_metric='cosine', digt_num=4, target_idx =None):
     dist_arr = pairwise_distances(in_arr, in_arr, metric=distance_metric)
     
